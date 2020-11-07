@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorting Hat</title>
+</head>
+
+<body>
+
+
+
+
+    <!-- タイトル文章 -->
+    <header>
+        <div class="titlebox">
+            <h1>Harry Potter Sorting Hat</h1>
+        </div>
+    </header>
+
+    <div class="subtitle">
+        <p>スリザリンを回避しよう</p>
+    </div>
+
+
+    <!-- 浮遊選択ボタン ----------------------------->
+    <div class="janken">
+        <div class="gu">
+            <p id="gu_btn">グー</p>
+        </div>
+
+        <div class="cho">
+            <p id="cho_btn">チョキ</p>
+        </div>
+
+        <div class="pa">
+            <p id="par_btn">パー</p>
+        </div>
+    </div>
+
+    <!-- 真ん中帽子画像 ------------------------------>
+
+    <div class="center">
+        <div class="harryhat">
+            <img src="../Sortinghat.gif" alt="">
+        </div>
+    </div>
+
+    <!-- 説明文 ------------------------------------->
+    <div class="text">
+        <div class="text_t">
+            <div id="cmp">組分け帽子の答えは？</div>
+            <div id="judgment">結果は？</div>
+        </div>
+    </div>
+
+    <footer>フッター</footer>
+
+
+
+    <!-- Javascriptじゃんけん機能 ---------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- グー ----------------------------------------->
+    <script>
+        $(function () {
+            $('#gu_btn').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 5);
+                if (randomnumber == 0) {
+                    $("#cmp").html("「difficult」");
+                } else if (randomnumber == 1) {
+
+                    $("#cmp").html("「Are you sure?」");
+                } else if (randomnumber == 2) {
+
+                    $("#cmp").html("「You're very smart」");
+                } else if (randomnumber == 3) {
+                    $("#cmp").html("「Umm」");
+                } else {
+                    $("#cmp").html("「WIISLEY!!」");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#gu_btn').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 5);
+                if (randomnumber == 0) {
+                    $("#judgment").html("スリザリン");
+                } else if (randomnumber == 1) {
+
+                    $("#judgment").html("グリフィンドール");
+                } else if (randomnumber == 2) {
+
+                    $("#judgment").html("ハッフルパフ");
+                } else if (randomnumber == 3) {
+                    $("#judgment").html("レイブンクロー");
+                } else {
+                    $("#judgment").html("アズカバン行き");
+                }
+            });
+
+        });
+    </script>
+
+
+    <!-- チョキ ----------------------------------------->
+    <script>
+        $(function () {
+            $('#cho_btn').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 5);
+                if (randomnumber == 0) {
+                    $("#cmp").html("「difficult」");
+                } else if (randomnumber == 1) {
+
+                    $("#cmp").html("「Are you sure?」");
+                } else if (randomnumber == 2) {
+
+                    $("#cmp").html("「You're very smart」");
+                } else if (randomnumber == 3) {
+                    $("#cmp").html("「Umm」");
+                } else {
+                    $("#cmp").html("「WIISLEY!!」");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#cho_btn').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 5);
+                if (randomnumber == 0) {
+                    $("#judgment").html("スリザリン");
+                } else if (randomnumber == 1) {
+
+                    $("#judgment").html("グリフィンドール");
+                } else if (randomnumber == 2) {
+
+                    $("#judgment").html("ハッフルパフ");
+                } else if (randomnumber == 3) {
+                    $("#judgment").html("レイブンクロー");
+                } else {
+                    $("#judgment").html("アズカバン行き");
+                }
+            });
+
+        });
+    </script>
+
+
+    <!-- パー ----------------------------------------->
+    <script>
+        $(function () {
+            $('#par_btn').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 5);
+                if (randomnumber == 0) {
+                    $("#cmp").html("「difficult」");
+                } else if (randomnumber == 1) {
+
+                    $("#cmp").html("「Are you sure?」");
+                } else if (randomnumber == 2) {
+
+                    $("#cmp").html("「You're very smart」");
+                } else if (randomnumber == 3) {
+                    $("#cmp").html("「Umm」");
+                } else {
+                    $("#cmp").html("「WIISLEY!!」");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#par_btn').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 5);
+                if (randomnumber == 0) {
+                    $("#judgment").html("スリザリン");
+                } else if (randomnumber == 1) {
+
+                    $("#judgment").html("グリフィンドール");
+                } else if (randomnumber == 2) {
+
+                    $("#judgment").html("ハッフルパフ");
+                } else if (randomnumber == 3) {
+                    $("#judgment").html("レイブンクロー");
+                } else {
+                    $("#judgment").html("アズカバン行き");
+                }
+            });
+
+        });
+    </script>
+
+
+
+    <!-- スタート画面 ---------------------------------------->
+    <div class="start">
+        <p><img src="../hogwarts.jpg" alt=""></p>
+    </div>
+
+    <a href="" id="startbutton">Harry Potter Sorting Hat</a>
+
+
+    <!-- 画面消える ----------------------------------------->
+    <script>
+        $(function () {
+            setTimeout(function () {
+                $('.start p').fadeIn(1600);
+            }, 500); //0.5秒後フェードイン
+            setTimeout(function () {
+                $('.start').fadeOut(500);
+            }, 2500); //2.5秒後フェードアウト
+        });
+    </script>
+    <script>
+        $(function () {
+            setTimeout(function () {
+                $('#startbutton').fadeIn(1600);
+            }, 500); //0.5秒後フェードイン
+            setTimeout(function () {
+                $('#startbutton').fadeOut(500);
+            }, 2500); //2.5秒後フェードアウト
+        });
+    </script>
+
+    <!-- <script>
+    $(function () {
+      $('#startbutton').on('click', function () {
+        $('#startbutton').fadeOut(2000);
+      }, 500);
+    });
+  </script> -->
+
+
+
+
+    <!-- 選択ボタン移動 ------------------------------------------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+            animateDiv($('.gu'));
+            animateDiv($('.cho'));
+            animateDiv($('.pa'));
+
+        });
+
+        function makeNewPosition() {
+            const h = $(window).height() + 600 - 800;
+            const w = $(window).width() - 100;
+
+            const nh = Math.floor(Math.random() * h);
+            const nw = Math.floor(Math.random() * w);
+
+            return [nh, nw];
+
+        }
+
+        function animateDiv(obj) {
+            const anime = makeNewPosition();
+            const anime_m = $(obj).offset();
+            const speed = calcSpeed([anime_m.top, anime_m.left], anime);
+            $(obj).animate({ top: anime[0], left: anime[1] }, speed, function () {
+                animateDiv(obj);
+            });
+        }
+
+
+
+        function calcSpeed(prev, next) {
+
+            const x = Math.abs(prev[0] - next[0]);
+            const y = Math.abs(prev[1] - next[1]);
+
+            const greatest = x > y ? x : y;
+
+            const speedModifier = 0.1;
+
+            const speed = Math.floor(greatest / speedModifier);
+
+            return speed;
+
+        }
+    </script>
+
+</body>
+
+</html>
