@@ -20,22 +20,22 @@
         </div>
     </header>
 
-    <div class="subtitle">
+    <div id="subt" class="subtitle">
         <p>スリザリンを回避しよう</p>
     </div>
 
 
     <!-- 浮遊選択ボタン ----------------------------->
     <div class="janken">
-        <div class="gu">
+        <div id="gub" class="gu">
             <p id="gu_btn">グー</p>
         </div>
 
-        <div class="cho">
+        <div id="chb" class="cho">
             <p id="cho_btn">チョキ</p>
         </div>
 
-        <div class="pa">
+        <div id="pab" class="pa">
             <p id="par_btn">パー</p>
         </div>
     </div>
@@ -49,14 +49,24 @@
     </div>
 
     <!-- 説明文 ------------------------------------->
-    <div class="text">
-        <div class="text_t">
-            <div id="cmp">組分け帽子の答えは？</div>
-            <div id="judgment">結果は？</div>
+
+    <div class="textname">
+        <div class="text_n">
+            <div id="name_k">組分け帽子</div>
+        </div>
+    </div>
+    <div class="textbox">
+        <div class="text">
+            <div class="text_t">
+                <div id="cmp">組分け帽子の答えは？</div>
+                <!-- <div id="judgment">結果は？</div> -->
+            </div>
         </div>
     </div>
 
-    <footer>フッター</footer>
+
+
+    <!-- <footer>この項目いる？</footer> -->
 
 
 
@@ -65,7 +75,7 @@
     <!-- グー ----------------------------------------->
     <script>
         $(function () {
-            $('#gu_btn').on('click', function () {
+            $('#gub').on('click', function () {
                 const randomnumber = Math.floor(Math.random() * 5);
                 if (randomnumber == 0) {
                     $("#cmp").html("「difficult」");
@@ -83,9 +93,9 @@
             });
         });
     </script>
-    <script>
+    <!-- <script>
         $(function () {
-            $('#gu_btn').on('click', function () {
+            $('#gub').on('click', function () {
                 const randomnumber = Math.floor(Math.random() * 5);
                 if (randomnumber == 0) {
                     $("#judgment").html("スリザリン");
@@ -103,13 +113,13 @@
             });
 
         });
-    </script>
+    </script> -->
 
 
     <!-- チョキ ----------------------------------------->
     <script>
         $(function () {
-            $('#cho_btn').on('click', function () {
+            $('#chb').on('click', function () {
                 const randomnumber = Math.floor(Math.random() * 5);
                 if (randomnumber == 0) {
                     $("#cmp").html("「difficult」");
@@ -127,9 +137,9 @@
             });
         });
     </script>
-    <script>
+    <!-- <script>
         $(function () {
-            $('#cho_btn').on('click', function () {
+            $('#chb').on('click', function () {
                 const randomnumber = Math.floor(Math.random() * 5);
                 if (randomnumber == 0) {
                     $("#judgment").html("スリザリン");
@@ -147,13 +157,13 @@
             });
 
         });
-    </script>
+    </script> -->
 
 
     <!-- パー ----------------------------------------->
     <script>
         $(function () {
-            $('#par_btn').on('click', function () {
+            $('#pab').on('click', function () {
                 const randomnumber = Math.floor(Math.random() * 5);
                 if (randomnumber == 0) {
                     $("#cmp").html("「difficult」");
@@ -171,9 +181,9 @@
             });
         });
     </script>
-    <script>
+    <!-- <script>
         $(function () {
-            $('#par_btn').on('click', function () {
+            $('#pab').on('click', function () {
                 const randomnumber = Math.floor(Math.random() * 5);
                 if (randomnumber == 0) {
                     $("#judgment").html("スリザリン");
@@ -191,7 +201,7 @@
             });
 
         });
-    </script>
+    </script> -->
 
 
 
@@ -285,7 +295,7 @@
 
         }
     </script>
-
+    <script src="app.js"></script>
 </body>
 
 </html>
