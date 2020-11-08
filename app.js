@@ -68,24 +68,32 @@ $(function () {
     $('#chb').on('click', function () {
         const randomnumber = Math.floor(Math.random() * 10);
         if (randomnumber > 2) {
-            $("#cmp").html(response[0]);
+            $("#cmp").html(sorting[0].response[0]);
+            document.getElementById('gub').textContent = sorting[1].answers[0];
+            document.getElementById('chb').textContent = sorting[1].answers[1];
+            document.getElementById('pab').textContent = sorting[1].answers[2];
+
         } else if (randomnumber < 1) {
-            $("#cmp").html(response[1])
+            $("#cmp").html(sorting[0].response[1])
         }
+
     });
 });
 
 //パーを押した場合
+
+var openImgTarget = $('.sryz'); //画像
+var closeimg = $('.harryhat');
 $(function () {
     $('#pab').on('click', function () {
-        const randomnumber = Math.floor(Math.random() * 10);
-        if (randomnumber > 2) {
-            $("#cmp").html(response[0]);
-        } else if (randomnumber < 1) {
-            $("#cmp").html(response[1])
-        }
+        $("#cmp").html(sorting[1].response[1]);
+        openImgTarget.fadeIn(5000); //画像がフワッと（fadeIn）現れて
+        closeimg.fadeOut(100);
     });
+
+
 });
+
 
 
 

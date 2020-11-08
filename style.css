@@ -27,6 +27,12 @@ header{
 .center {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.sryz {
+    display: none;
+    height: 300px;
 }
 
 .janken p {
