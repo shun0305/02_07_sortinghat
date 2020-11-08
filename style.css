@@ -17,6 +17,15 @@ header{
     height: 80px;
 }
 
+.finish {
+    color: rgb(11, 150, 4);
+    display: none;
+}
+.runatext {
+    color: rgb(39, 89, 253);
+    display: none;
+}
+
 .subtitle {
     text-align: center;
     font-size: 20px;
@@ -31,6 +40,10 @@ header{
 }
 
 .sryz {
+    display: none;
+    height: 300px;
+}
+.runa {
     display: none;
     height: 300px;
 }

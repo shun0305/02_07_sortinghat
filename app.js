@@ -45,6 +45,11 @@ document.getElementById('gub').textContent = sorting[0].answers[0]
 document.getElementById('chb').textContent = sorting[0].answers[1]
 document.getElementById('pab').textContent = sorting[0].answers[2]
 
+const closeimg = $('.harryhat');
+const closingtext = $('.titlebox');
+const runa = $('.runa');
+const runatext = $('.runatext');
+
 
 //グーを押した場合
 $(function () {
@@ -58,6 +63,11 @@ $(function () {
 
         } else if (randomnumber < 1) {
             $("#cmp").html(sorting[0].response[1])
+            runa.fadeIn(5000);
+            closeimg.fadeOut(0);
+            runatext.fadeIn(5000);
+            closingtext.fadeOut(0);
+
         }
 
     });
@@ -82,13 +92,17 @@ $(function () {
 
 //パーを押した場合
 
-var openImgTarget = $('.sryz'); //画像
-var closeimg = $('.harryhat');
+const gameover = $('.sryz'); //画像
+const gameovertext = $('.finish');
+
 $(function () {
     $('#pab').on('click', function () {
         $("#cmp").html(sorting[1].response[1]);
-        openImgTarget.fadeIn(5000); //画像がフワッと（fadeIn）現れて
-        closeimg.fadeOut(100);
+        gameover.fadeIn(5000); //画像がフワッと（fadeIn）現れて
+        closeimg.fadeOut(0);
+        gameovertext.fadeIn(5000);
+        closingtext.fadeOut(0);
+
     });
 
 
@@ -116,17 +130,15 @@ $(function () {
     }, 500); //0.5秒後フェードイン
     setTimeout(function () {
         $('.start').fadeOut(500);
-    }, 2500); //2.5秒後フェードアウト
-});
-
-$(function () {
+    }, 6500); //2.5秒後フェードアウト
     setTimeout(function () {
         $('#startbutton').fadeIn(1600);
     }, 500); //0.5秒後フェードイン
     setTimeout(function () {
         $('#startbutton').fadeOut(500);
-    }, 2500); //2.5秒後フェードアウト
+    }, 6500); //2.5秒後フェードアウト
 });
+
 
 
 $(document).ready(function () {
