@@ -10,11 +10,6 @@ const sorting = [
             'んん、難しい、こいつは難しい。勇気に溢れておる。頭も悪くない。<br>才能もある。そして、自分の力を発揮したいと願っておる。',
             '超ラッキー！あなたはレイブンクロー',
         ],
-        percentage: [
-            '25',
-            '75',
-            '100',
-        ]
     },
     {
         question: 'んん、難しい、こいつは難しい。勇気に溢れておる。頭も悪くない。<br>才能もある。そして、自分の力を発揮したいと願っておる。',
@@ -27,16 +22,12 @@ const sorting = [
             'おぉ、スリザリンは嫌なのか。いいのかね？君は偉大になれる。<br>その素質は十分に備わっておる。スリザリンに入れば、<br>間違いなく偉大になる者への道が開けるのだが、嫌かね？',
             'はい、スリザリン',
         ],
-        percentage: [
-            '25',
-            '75',
-            '100',
-        ]
+
     },
     {
         question: 'おぉ、スリザリンは嫌なのか。いいのかね？君は偉大になれる。<br>その素質は十分に備わっておる。スリザリンに入れば、<br>間違いなく偉大になる者への道が開けるのだが、嫌かね？',
         answers: [
-            'お願い、どうか、スリザリンは、、',
+            'どうか、スリザリンは、、',
             '素質あるかなぁ',
             '偉大になれるの？',
         ],
@@ -44,16 +35,13 @@ const sorting = [
             'それでも嫌と言うなら…それならば、グリフィンドール！',
             'はい、スリザリン',
         ],
-        percentage: [
-            '25',
-            '75',
-            '100',
-        ]
+
     }
 ];
 
 const sortinglength = sorting.length;
 let sortingindex = 0;
+
 
 
 document.getElementById('gub').textContent = sorting[0].answers[0]
@@ -64,20 +52,22 @@ const closeimg = $('.harryhat');
 const closingtext = $('.titlebox');
 const runa = $('.runa');
 const runatext = $('.runatext');
+const guri = $('.guri');
+const guritext = $('.guritext');
 
 
 //グーを押した場合
 $(function () {
     $('#gub').on('click', function () {
         const randomnumber = Math.floor(Math.random() * 10);
-        if (randomnumber > 2) {
+        if (randomnumber < 9) {
             $("#cmp").html(sorting[0].response[0]);
-            $('gub').textContent = sorting[1].answers[0];
-            $('chb').textContent = sorting[1].answers[1];
-            $('pab').textContent = sorting[1].answers[2];
+            document.getElementById('gub').textContent = sorting[1].answers[0];
+            document.getElementById('chb').textContent = sorting[1].answers[1];
+            document.getElementById('pab').textContent = sorting[1].answers[2];
 
 
-        } else if (randomnumber < 1) {
+        } else if (randomnumber = 9) {
             $("#cmp").html(sorting[0].response[1])
             runa.fadeIn(5000);
             closeimg.fadeOut(0);
@@ -85,23 +75,44 @@ $(function () {
             closingtext.fadeOut(0);
 
         }
+        //二階層目///////////////////
 
-        sortingindex++;
+        $('#gub').on('click', function () {
+            const randomnumber = Math.floor(Math.random() * 10);
+            if (randomnumber < 10) {
+                $("#cmp").html(sorting[1].response[0]);
+                document.getElementById('gub').textContent = sorting[2].answers[0];
+                document.getElementById('chb').textContent = sorting[2].answers[1];
+                document.getElementById('pab').textContent = sorting[2].answers[2];
 
-        if (sortingindex < sortinglength) {
-            $("#cmp").html(sorting[1].response[0]);
-            $('gub').textContent = sorting[2].answers[0];
-            $('chb').textContent = sorting[2].answers[1];
-            $('pab').textContent = sorting[2].answers[2];
 
-        } else {
-            window.alert('finish')
-        }
+            }
+            //三階層目///////////////////
+            $('#gub').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 10);
+                if (randomnumber < 10) {
+                    $("#cmp").html(sorting[2].response[0]);
+                    guri.fadeIn(5000);
+                    closeimg.fadeOut(0);
+                    guritext.fadeIn(5000);
+                    closingtext.fadeOut(0);
+
+
+                }
+
+
+            });
+
+        });
+
+
+
 
     });
 });
 
 //チョキを押した場合
+
 $(function () {
     $('#chb').on('click', function () {
         const randomnumber = Math.floor(Math.random() * 10);
@@ -110,9 +121,24 @@ $(function () {
             document.getElementById('gub').textContent = sorting[1].answers[0];
             document.getElementById('chb').textContent = sorting[1].answers[1];
             document.getElementById('pab').textContent = sorting[1].answers[2];
-
+            count = 1
         } else if (randomnumber < 1) {
             $("#cmp").html(sorting[0].response[1])
+        }
+
+    });
+});
+$(function () {
+    $('#chb').on('click', function () {
+        const randomnumber = Math.floor(Math.random() * 10);
+        if (randomnumber > 2) {
+            $("#cmp").html(sorting[1].response[0]);
+            document.getElementById('gub').textContent = sorting[2].answers[0];
+            document.getElementById('chb').textContent = sorting[2].answers[1];
+            document.getElementById('pab').textContent = sorting[2].answers[2];
+
+        } else if (randomnumber < 1) {
+            $("#cmp").html(sorting[1].response[0])
         }
 
     });

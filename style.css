@@ -25,6 +25,10 @@ header{
     color: rgb(39, 89, 253);
     display: none;
 }
+.guritext {
+    color: rgb(221, 31, 31);
+    display: none;
+}
 
 .subtitle {
     text-align: center;
@@ -45,6 +49,10 @@ header{
     height: 300px;
 }
 .runa {
+    display: none;
+    height: 300px;
+}
+.guri {
     display: none;
     height: 300px;
 }
