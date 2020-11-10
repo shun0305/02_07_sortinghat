@@ -1,3 +1,18 @@
+// const ron = $('.ron');//ロン
+
+// var log = function () {
+//     ron.fadeIn(5000);
+//     closeimg.fadeOut(0);
+// };
+// var logf = function () {
+//     ron.fadeOut(5000);
+//     closeimg.fadeIn(0);
+// };
+
+// setTimeout(log, 3000);
+// setTimeout(logf, 3000);
+
+
 $(document).ready(function () {
     animateDiv($('.gu'));
     animateDiv($('.cho'));
@@ -254,7 +269,6 @@ $(function () {
         $('#startbutton').fadeOut(500);
     }, 2500); //2.5秒後フェードアウト
 });
-
 
 
 
