@@ -9,6 +9,11 @@ const sorting = [
         response: [
             'んん、難しい、こいつは難しい。勇気に溢れておる。頭も悪くない。<br>才能もある。そして、自分の力を発揮したいと願っておる。',
             '超ラッキー！あなたはレイブンクロー',
+        ],
+        percentage: [
+            '25',
+            '75',
+            '100',
         ]
     },
     {
@@ -21,6 +26,11 @@ const sorting = [
         response: [
             'おぉ、スリザリンは嫌なのか。いいのかね？君は偉大になれる。<br>その素質は十分に備わっておる。スリザリンに入れば、<br>間違いなく偉大になる者への道が開けるのだが、嫌かね？',
             'はい、スリザリン',
+        ],
+        percentage: [
+            '25',
+            '75',
+            '100',
         ]
     },
     {
@@ -33,6 +43,11 @@ const sorting = [
         response: [
             'それでも嫌と言うなら…それならば、グリフィンドール！',
             'はい、スリザリン',
+        ],
+        percentage: [
+            '25',
+            '75',
+            '100',
         ]
     }
 ];
@@ -57,9 +72,10 @@ $(function () {
         const randomnumber = Math.floor(Math.random() * 10);
         if (randomnumber > 2) {
             $("#cmp").html(sorting[0].response[0]);
-            document.getElementById('gub').textContent = sorting[1].answers[0];
-            document.getElementById('chb').textContent = sorting[1].answers[1];
-            document.getElementById('pab').textContent = sorting[1].answers[2];
+            $('gub').textContent = sorting[1].answers[0];
+            $('chb').textContent = sorting[1].answers[1];
+            $('pab').textContent = sorting[1].answers[2];
+
 
         } else if (randomnumber < 1) {
             $("#cmp").html(sorting[0].response[1])
@@ -68,6 +84,18 @@ $(function () {
             runatext.fadeIn(5000);
             closingtext.fadeOut(0);
 
+        }
+
+        sortingindex++;
+
+        if (sortingindex < sortinglength) {
+            $("#cmp").html(sorting[1].response[0]);
+            $('gub').textContent = sorting[2].answers[0];
+            $('chb').textContent = sorting[2].answers[1];
+            $('pab').textContent = sorting[2].answers[2];
+
+        } else {
+            window.alert('finish')
         }
 
     });
@@ -94,14 +122,20 @@ $(function () {
 
 const gameover = $('.sryz'); //画像
 const gameovertext = $('.finish');
+const gubutton = document.getElementById('.gu')
+const chbutton = document.getElementById('.cho')
+const pabutton = document.getElementById('.pa')
 
 $(function () {
     $('#pab').on('click', function () {
         $("#cmp").html(sorting[1].response[1]);
-        gameover.fadeIn(5000); //画像がフワッと（fadeIn）現れて
+        gameover.fadeIn(4000); //画像がフワッと（fadeIn）現れて
         closeimg.fadeOut(0);
-        gameovertext.fadeIn(5000);
+        gameovertext.fadeIn(4000);
         closingtext.fadeOut(0);
+        gubutton.fadeOut(0);
+        chbutton.fadeOut(0);
+        pabutton.fadeOut(0);
 
     });
 
@@ -130,13 +164,13 @@ $(function () {
     }, 500); //0.5秒後フェードイン
     setTimeout(function () {
         $('.start').fadeOut(500);
-    }, 6500); //2.5秒後フェードアウト
+    }, 2500); //2.5秒後フェードアウト
     setTimeout(function () {
         $('#startbutton').fadeIn(1600);
     }, 500); //0.5秒後フェードイン
     setTimeout(function () {
         $('#startbutton').fadeOut(500);
-    }, 6500); //2.5秒後フェードアウト
+    }, 2500); //2.5秒後フェードアウト
 });
 
 
