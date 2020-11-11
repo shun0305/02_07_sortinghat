@@ -87,7 +87,7 @@ const sorting = [
         ],
         response: [
             'おぉ、スリザリンは嫌なのか。いいのかね？君は偉大になれる。<br>その素質は十分に備わっておる。スリザリンに入れば、<br>間違いなく偉大になる者への道が開けるのだが、嫌かね？',
-            'はい、スリザリン',
+            '残念、あなたはスリザリン',
         ],
 
     },
@@ -100,7 +100,7 @@ const sorting = [
         ],
         response: [
             'それでも嫌と言うなら…それならば、グリフィンドール！',
-            'はい、スリザリン',
+            '残念、あなたはスリザリン',
         ],
 
     }
@@ -128,6 +128,11 @@ const chbutton = document.getElementById('#cho')
 const pabutton = document.getElementById('.pa')
 const cmpout = $("#cmp")
 const judout = $("judgment")
+const meternow = $('#fuelh');
+const metermax = $('#fuelmax');
+const metermin = $('#fuelmin');
+const meterup = $('#fuelup');
+const meterdown = $('#fueldown');
 
 typing('#cmp', "皆さんがどの寮に入るか組み分けをします。グリフィンドール、ハッフルパフ、レイブンクロー、そしてスリザリン。");
 
@@ -142,6 +147,8 @@ $(function () {
             document.getElementById('chb').textContent = sorting[1].answers[1];
             document.getElementById('pab').textContent = sorting[1].answers[2];
             // typing('#judgment', sorting[0].response[0]);
+            meternow.fadeOut(0);
+            meterup.fadeIn(0);
 
 
 
@@ -165,7 +172,8 @@ $(function () {
                 document.getElementById('gub').textContent = sorting[2].answers[0];
                 document.getElementById('chb').textContent = sorting[2].answers[1];
                 document.getElementById('pab').textContent = sorting[2].answers[2];
-
+                meterup.fadeOut(0);
+                meterdown.fadeIn(0);
 
 
 
@@ -180,9 +188,8 @@ $(function () {
                     closeimg.fadeOut(0);
                     guritext.fadeIn(5000);
                     closingtext.fadeOut(0);
-                    gubutton.fadeOut(0);
-                    chbutton.fadeOut(0);
-                    pabutton.fadeOut(0);
+                    meterdown.fadeOut(0);
+                    metermin.fadeIn(0);
 
                 }
 
@@ -207,7 +214,9 @@ $(function () {
             document.getElementById('gub').textContent = sorting[1].answers[0];
             document.getElementById('chb').textContent = sorting[1].answers[1];
             document.getElementById('pab').textContent = sorting[1].answers[2];
-            count = 1
+            meternow.fadeOut(0);
+            meterup.fadeIn(0);
+
         } else if (randomnumber > 7) {
             $("#cmp").html(sorting[0].response[1])
         }
@@ -218,6 +227,8 @@ $(function () {
                 document.getElementById('gub').textContent = sorting[2].answers[0];
                 document.getElementById('chb').textContent = sorting[2].answers[1];
                 document.getElementById('pab').textContent = sorting[2].answers[2];
+                meterup.fadeOut(0);
+                meterdown.fadeIn(0);
 
             }
             $('#chb').on('click', function () {
@@ -228,6 +239,8 @@ $(function () {
                     closeimg.fadeOut(0);
                     gameovertext.fadeIn(4000);
                     closingtext.fadeOut(0);
+                    meterdown.fadeOut(0);
+                    metermax.fadeIn(0);
 
                 }
 
@@ -249,9 +262,10 @@ $(function () {
         closeimg.fadeOut(0);
         gameovertext.fadeIn(4000);
         closingtext.fadeOut(0);
-        gubutton.fadeOut(0);
-        chbutton.fadeOut(0);
-        pabutton.fadeOut(0);
+        meternow.fadeOut(0);
+        meterup.fadeOut(0);
+        meterdown.fadeOut(0);
+        metermax.fadeIn(0);
 
     });
 

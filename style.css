@@ -36,9 +36,34 @@ header{
     line-height: 5px;
 }
 
-#fuel {
+.metergage {
+    display: flex;
+    justify-content: center;
+}
+
+#fuelh {
     width: 400px;
     height: 30px;
+}
+#fuelmax {
+    width: 400px;
+    height: 30px;
+    display: none;
+}
+#fuelmin {
+    width: 400px;
+    height: 30px;
+      display: none;
+}
+#fuelup {
+    width: 400px;
+    height: 30px;
+      display: none;
+}
+#fueldown {
+    width: 400px;
+    height: 30px;
+      display: none;
 }
 
 
