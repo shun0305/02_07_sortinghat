@@ -12,6 +12,13 @@
 // setTimeout(log, 3000);
 // setTimeout(logf, 3000);
 
+const typing = (element, sentence) => {
+    [...sentence].forEach((character, index) => {
+        setTimeout(() => {
+            document.querySelector(element).textContent += character;
+        }, 150 * ++index);
+    });
+}
 
 $(document).ready(function () {
     animateDiv($('.gu'));
@@ -67,7 +74,7 @@ const sorting = [
             'どこでもいいよ',
         ],
         response: [
-            'んん、難しい、こいつは難しい。勇気に溢れておる。頭も悪くない。<br>才能もある。そして、自分の力を発揮したいと願っておる。',
+            'んん、難しい、こいつは難しい。勇気に溢れておる。頭も悪くない。才能もある。そして、自分の力を発揮したいと願っておる。',
             '超ラッキー！あなたはレイブンクロー',
         ],
     },
@@ -119,7 +126,10 @@ const gameovertext = $('.finish');//ゲームオーバー
 const gubutton = document.getElementById('#gu_btn')
 const chbutton = document.getElementById('#cho')
 const pabutton = document.getElementById('.pa')
+const cmpout = $("#cmp")
+const judout = $("judgment")
 
+typing('#cmp', "皆さんがどの寮に入るか組み分けをします。グリフィンドール、ハッフルパフ、レイブンクロー、そしてスリザリン。");
 
 //グーを押した場合
 $(function () {
@@ -127,9 +137,14 @@ $(function () {
         const randomnumber = Math.floor(Math.random() * 10);
         if (randomnumber < 9) {
             $("#cmp").html(sorting[0].response[0]);
+            // cmpout.fadeOut(0);
             document.getElementById('gub').textContent = sorting[1].answers[0];
             document.getElementById('chb').textContent = sorting[1].answers[1];
             document.getElementById('pab').textContent = sorting[1].answers[2];
+            // typing('#judgment', sorting[0].response[0]);
+
+
+
 
 
         } else if (randomnumber = 9) {
@@ -138,6 +153,7 @@ $(function () {
             closeimg.fadeOut(0);
             runatext.fadeIn(5000);
             closingtext.fadeOut(0);
+
 
         }
         //二階層目///////////////////
@@ -149,6 +165,9 @@ $(function () {
                 document.getElementById('gub').textContent = sorting[2].answers[0];
                 document.getElementById('chb').textContent = sorting[2].answers[1];
                 document.getElementById('pab').textContent = sorting[2].answers[2];
+
+
+
 
 
             }
@@ -257,21 +276,18 @@ $(function () {
 // < !--画面消える -
 $(function () {
     setTimeout(function () {
-        $('.start p').fadeIn(1600);
+        $('.start p').fadeIn(800);
     }, 500); //0.5秒後フェードイン
     setTimeout(function () {
         $('.start').fadeOut(500);
-    }, 2500); //2.5秒後フェードアウト
+    }, 2000); //2.5秒後フェードアウト
     setTimeout(function () {
-        $('#startbutton').fadeIn(1600);
+        $('#startbutton').fadeIn(800);
     }, 500); //0.5秒後フェードイン
     setTimeout(function () {
         $('#startbutton').fadeOut(500);
-    }, 2500); //2.5秒後フェードアウト
+    }, 2000); //2.5秒後フェードアウト
 });
-
-
-
 
 
 

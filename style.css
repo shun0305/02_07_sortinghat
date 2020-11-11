@@ -121,7 +121,9 @@ header{
     
 }
 
-
+.text_t {
+    width: 950px;
+}
 
 
 .text { 
@@ -236,3 +238,15 @@ footer{
     text-decoration: underline;
 }
 
+
+
+/* @keyframes typing { from { width: 0; } }
+@keyframes caret { 50% { border-color: transparent; } } 
+
+ #cmp {
+width: 40ch;
+border-right: .08em solid;
+overflow: hidden;
+white-space: nowrap;
+animation: typing 5s steps(50, end), caret .5s step-end infinite;
+}  */
