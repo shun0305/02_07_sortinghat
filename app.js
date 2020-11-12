@@ -231,6 +231,22 @@ $(function () {
                 meterdown.fadeIn(0);
 
             }
+            $('#gub').on('click', function () {
+                const randomnumber = Math.floor(Math.random() * 10);
+                if (randomnumber < 10) {
+                    $("#cmp").html(sorting[2].response[0]);
+                    guri.fadeIn(5000);
+                    closeimg.fadeOut(0);
+                    guritext.fadeIn(5000);
+                    closingtext.fadeOut(0);
+                    meterdown.fadeOut(0);
+                    meterup.fadeOut(0);
+                    metermin.fadeIn(0);
+
+                }
+
+
+            });
             $('#chb').on('click', function () {
                 const randomnumber = Math.floor(Math.random() * 10);
                 if (randomnumber < 10) {
