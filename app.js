@@ -148,7 +148,7 @@ $(function () {
             document.getElementById('pab').textContent = sorting[1].answers[2];
             // typing('#judgment', sorting[0].response[0]);
             meternow.fadeOut(0);
-            meterup.fadeIn(0);
+            meterup.fadeIn(2000);
 
 
 
@@ -173,7 +173,7 @@ $(function () {
                 document.getElementById('chb').textContent = sorting[2].answers[1];
                 document.getElementById('pab').textContent = sorting[2].answers[2];
                 meterup.fadeOut(0);
-                meterdown.fadeIn(0);
+                meterdown.fadeIn(2000);
 
 
 
@@ -189,7 +189,7 @@ $(function () {
                     guritext.fadeIn(5000);
                     closingtext.fadeOut(0);
                     meterdown.fadeOut(0);
-                    metermin.fadeIn(0);
+                    metermin.fadeIn(2000);
 
                 }
 
@@ -215,7 +215,7 @@ $(function () {
             document.getElementById('chb').textContent = sorting[1].answers[1];
             document.getElementById('pab').textContent = sorting[1].answers[2];
             meternow.fadeOut(0);
-            meterup.fadeIn(0);
+            meterup.fadeIn(2000);
 
         } else if (randomnumber > 7) {
             $("#cmp").html(sorting[0].response[1])
@@ -228,7 +228,7 @@ $(function () {
                 document.getElementById('chb').textContent = sorting[2].answers[1];
                 document.getElementById('pab').textContent = sorting[2].answers[2];
                 meterup.fadeOut(0);
-                meterdown.fadeIn(0);
+                meterdown.fadeIn(2000);
 
             }
             $('#gub').on('click', function () {
@@ -241,7 +241,7 @@ $(function () {
                     closingtext.fadeOut(0);
                     meterdown.fadeOut(0);
                     meterup.fadeOut(0);
-                    metermin.fadeIn(0);
+                    metermin.fadeIn(2000);
 
                 }
 
@@ -256,7 +256,7 @@ $(function () {
                     gameovertext.fadeIn(4000);
                     closingtext.fadeOut(0);
                     meterdown.fadeOut(0);
-                    metermax.fadeIn(0);
+                    metermax.fadeIn(2000);
 
                 }
 
@@ -281,7 +281,7 @@ $(function () {
         meternow.fadeOut(0);
         meterup.fadeOut(0);
         meterdown.fadeOut(0);
-        metermax.fadeIn(0);
+        metermax.fadeIn(2000);
 
     });
 
