@@ -143,6 +143,9 @@ const glogo2 = $('#glogo2');
 const glogo3 = $('#glogo3');
 const hlogo = $('#hlogo');
 const rlogo = $('#rlogo');
+const rlogo1 = $('#rlogo1');
+const rlogo2 = $('#rlogo2');
+const rlogo3 = $('#rlogo3');
 
 typing('#cmp', "皆さんがどの寮に入るか組み分けをします。グリフィンドール、ハッフルパフ、レイブンクロー、そしてスリザリン。");
 
@@ -164,12 +167,22 @@ $(function () {
 
 
 
-        } else if (randomnumber = 9) {
+        } else if (randomnumber > 8) {
             $("#cmp").html(sorting[0].response[1])
             runa.fadeIn(5000);
             closeimg.fadeOut(0);
             runatext.fadeIn(5000);
             closingtext.fadeOut(0);
+            meternow.fadeOut(0);
+            metermin.fadeIn(2000);
+            glogo.fadeOut(0);
+            rlogo.fadeOut(0);
+            hlogo.fadeOut(0);
+            slogo.fadeOut(0);
+            rlogo1.fadeIn(4000);
+            rlogo2.fadeIn(4000);
+            rlogo3.fadeIn(4000);
+            rlogo.fadeIn(4000);
 
 
         }
@@ -204,10 +217,10 @@ $(function () {
                     rlogo.fadeOut(0);
                     hlogo.fadeOut(0);
                     slogo.fadeOut(0);
-                    glogo1.fadeIn(2000);
-                    glogo2.fadeIn(2000);
-                    glogo3.fadeIn(2000);
-                    glogo.fadeIn(2000);
+                    glogo1.fadeIn(4000);
+                    glogo2.fadeIn(4000);
+                    glogo3.fadeIn(4000);
+                    glogo.fadeIn(4000);
 
 
 
@@ -229,7 +242,7 @@ $(function () {
 $(function () {
     $('#chb').on('click', function () {
         const randomnumber = Math.floor(Math.random() * 10);
-        if (randomnumber < 10) {
+        if (randomnumber < 9) {
             $("#cmp").html(sorting[0].response[0]);
             document.getElementById('gub').textContent = sorting[1].answers[0];
             document.getElementById('chb').textContent = sorting[1].answers[1];
@@ -237,8 +250,22 @@ $(function () {
             meternow.fadeOut(0);
             meterup.fadeIn(2000);
 
-        } else if (randomnumber > 7) {
+        } else if (randomnumber > 8) {
             $("#cmp").html(sorting[0].response[1])
+            runa.fadeIn(5000);
+            closeimg.fadeOut(0);
+            runatext.fadeIn(5000);
+            closingtext.fadeOut(0);
+            meternow.fadeOut(0);
+            metermin.fadeIn(2000);
+            glogo.fadeOut(0);
+            rlogo.fadeOut(0);
+            hlogo.fadeOut(0);
+            slogo.fadeOut(0);
+            rlogo1.fadeIn(4000);
+            rlogo2.fadeIn(4000);
+            rlogo3.fadeIn(4000);
+            rlogo.fadeIn(4000);
         }
         $('#chb').on('click', function () {
             const randomnumber = Math.floor(Math.random() * 10);
@@ -266,10 +293,10 @@ $(function () {
                     rlogo.fadeOut(0);
                     hlogo.fadeOut(0);
                     slogo.fadeOut(0);
-                    glogo1.fadeIn(2000);
-                    glogo2.fadeIn(2000);
-                    glogo3.fadeIn(2000);
-                    glogo.fadeIn(2000);
+                    glogo1.fadeIn(4000);
+                    glogo2.fadeIn(4000);
+                    glogo3.fadeIn(4000);
+                    glogo.fadeIn(4000);
 
                 }
 
@@ -289,10 +316,10 @@ $(function () {
                     rlogo.fadeOut(0);
                     hlogo.fadeOut(0);
                     slogo.fadeOut(0);
-                    slogo1.fadeIn(2000);
-                    slogo2.fadeIn(2000);
-                    slogo3.fadeIn(2000);
-                    slogo.fadeIn(2000);
+                    slogo1.fadeIn(4000);
+                    slogo2.fadeIn(4000);
+                    slogo3.fadeIn(4000);
+                    slogo.fadeIn(4000);
 
                 }
 
@@ -323,10 +350,10 @@ $(function () {
         rlogo.fadeOut(0);
         hlogo.fadeOut(0);
         slogo.fadeOut(0);
-        slogo1.fadeIn(2000);
-        slogo2.fadeIn(2000);
-        slogo3.fadeIn(2000);
-        slogo.fadeIn(2000);
+        slogo1.fadeIn(4000);
+        slogo2.fadeIn(4000);
+        slogo3.fadeIn(4000);
+        slogo.fadeIn(4000);
 
     });
 
