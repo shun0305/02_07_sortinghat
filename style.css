@@ -73,6 +73,24 @@ header{
     align-items: center;
 }
 
+.slogo1 {
+    display: none;
+}
+.slogo2 {
+    display: none;
+}
+.slogo3 {
+    display: none;
+}
+.glogo1 {
+    display: none;
+}
+.glogo2 {
+    display: none;
+}
+.glogo3 {
+    display: none;
+}
 .sryz {
     display: none;
     height: 300px;

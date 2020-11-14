@@ -133,6 +133,16 @@ const metermax = $('#fuelmax');
 const metermin = $('#fuelmin');
 const meterup = $('#fuelup');
 const meterdown = $('#fueldown');
+const slogo = $('#slogo');
+const slogo1 = $('#slogo1');
+const slogo2 = $('#slogo2');
+const slogo3 = $('#slogo3');
+const glogo = $('#glogo');
+const glogo1 = $('#glogo1');
+const glogo2 = $('#glogo2');
+const glogo3 = $('#glogo3');
+const hlogo = $('#hlogo');
+const rlogo = $('#rlogo');
 
 typing('#cmp', "皆さんがどの寮に入るか組み分けをします。グリフィンドール、ハッフルパフ、レイブンクロー、そしてスリザリン。");
 
@@ -190,6 +200,16 @@ $(function () {
                     closingtext.fadeOut(0);
                     meterdown.fadeOut(0);
                     metermin.fadeIn(2000);
+                    glogo.fadeOut(0);
+                    rlogo.fadeOut(0);
+                    hlogo.fadeOut(0);
+                    slogo.fadeOut(0);
+                    glogo1.fadeIn(2000);
+                    glogo2.fadeIn(2000);
+                    glogo3.fadeIn(2000);
+                    glogo.fadeIn(2000);
+
+
 
                 }
 
@@ -242,6 +262,14 @@ $(function () {
                     meterdown.fadeOut(0);
                     meterup.fadeOut(0);
                     metermin.fadeIn(2000);
+                    glogo.fadeOut(0);
+                    rlogo.fadeOut(0);
+                    hlogo.fadeOut(0);
+                    slogo.fadeOut(0);
+                    glogo1.fadeIn(2000);
+                    glogo2.fadeIn(2000);
+                    glogo3.fadeIn(2000);
+                    glogo.fadeIn(2000);
 
                 }
 
@@ -257,6 +285,14 @@ $(function () {
                     closingtext.fadeOut(0);
                     meterdown.fadeOut(0);
                     metermax.fadeIn(2000);
+                    glogo.fadeOut(0);
+                    rlogo.fadeOut(0);
+                    hlogo.fadeOut(0);
+                    slogo.fadeOut(0);
+                    slogo1.fadeIn(2000);
+                    slogo2.fadeIn(2000);
+                    slogo3.fadeIn(2000);
+                    slogo.fadeIn(2000);
 
                 }
 
@@ -282,6 +318,15 @@ $(function () {
         meterup.fadeOut(0);
         meterdown.fadeOut(0);
         metermax.fadeIn(2000);
+        // $("#glogo").html(slogo);
+        glogo.fadeOut(0);
+        rlogo.fadeOut(0);
+        hlogo.fadeOut(0);
+        slogo.fadeOut(0);
+        slogo1.fadeIn(2000);
+        slogo2.fadeIn(2000);
+        slogo3.fadeIn(2000);
+        slogo.fadeIn(2000);
 
     });
 
